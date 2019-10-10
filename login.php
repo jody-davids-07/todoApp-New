@@ -113,3 +113,71 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 }
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Font awesome-->
+    <script src="https://kit.fontawesome.com/0cd95c0d58.js" crossorigin="anonymous"></script>
+    <!--Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>To Do Login</title>
+</head>
+<body class="login-body">
+    
+    <div class="container mt-4">
+        <div class="row">
+        <div class="col-12 login-title text-center">
+            <h1>Nav Task Manager</h1>
+            <p>Life is too short to not have your tasks in order.</p>
+        </div>
+        </div>
+    </div>
+    <div class="container login-page-container ">
+
+        <!--Login form-->
+        <div class="container form-container">
+            <div class="row">
+            <div class="col-sm-12">
+                <form role="form" method="POST">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter username." name="username" required>
+                    <small id="emailHelp" class="form-text text-muted"><?php echo $username_err;?></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="userpassword">Password</label>
+                    <input type="password" class="form-control" id="userpassword" placeholder="Password" name="password" required>
+                    <small id="emailHelp" class="form-text text-muted"><?php echo $password_err;?></small>
+                </div>
+
+                <button type="submit" class="btn btn-primary sign-in-btn">Sign in</button>
+
+                <a href="resetpass.php" class="btn btn-light">Reset
+                </a>
+
+
+                <div class="flex-col-c p-t-170 p-b-40">
+						<span class="txt1 p-b-9">
+							Don’t have an account?
+						</span>
+
+						<a href="register.php" class="txt3">
+							Sign up now
+						</a>
+                </div>
+                </form>
+            </div>
+            </div>
+        </div>
+        <!--Login form-->
+
+    </div>
+    
+</body>
+</html>
