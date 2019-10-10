@@ -82,6 +82,15 @@ $user_id = $_SESSION["id"];
 
         <ul class="list-group todos mx-auto text-light">
 
+        <!--PHP CLASSS START-->
+        <?php
+            require 'config/conn.php';
+            $user = new Todo($pdo,$user_id);
+
+            $user->display();
+            ?>
+        <!--PHP CLASSS END-->
+        
         </ul>
 
         <div class="text-center mt-5">
