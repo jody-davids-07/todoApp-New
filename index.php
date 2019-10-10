@@ -65,3 +65,33 @@
        
 
         <ul class="list-group todos mx-auto text-light">
+
+        </ul>
+
+        <div class="text-center mt-5">
+            <h3 class="form-header">Add Task</h3>
+        </div>
+
+        <!--Add Task Form-->
+        <form class=" add form-inline mt-5 d-flex justify-content-between" method="POST">
+
+        <input type="text" class="form-control mb-2 mr-sm-2" id="taskname" placeholder="Add Task" name="add" required>
+
+        <div class="input-group mb-2 mr-sm-2">
+            <div class="input-group-prepend">
+            <div class="input-group-text">Date</div>
+            </div>
+            <input type="date" class="form-control" id="duedate" name ="date" placeholder="Enter task due date" required>
+        </div>
+
+        <button type="submit" class="btn btn-dark mb-2" name="addTask" >Add Task</button>
+        </form>
+
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./js/ajx.js"></script>
+   <!-- //<script src="./js/welcome.js"></script> -->
+</body>
+</html>
