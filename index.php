@@ -1,3 +1,19 @@
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+//collect user details 
+//userid
+//username
+$user_id = $_SESSION["id"];
+ $username = $_SESSION["username"];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
