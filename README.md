@@ -1,5 +1,5 @@
 # Project Title
-
+This project is a to-do app made using HTML, CSS, js, php, MySQL and Ajax. It allows users to interact with inputting and manipulation of their list by adding to, editing and deleting tasks.All thses commands go to a remote database.
 
 ## Getting Started
 • Ensure that you've installed WAMPSERVER, Github, Google Chrome and Visual studio code to your local machine.
