@@ -131,3 +131,89 @@ if(isset($_POST["addTask"])){
 
 }
 ?>
+
+<?php 
+ class Todo {
+    
+    public $pdo,$user_id,$task,$date;
+    function __construct($param_PDO,$param_user_id)
+
+    {
+        $this->pdo = $param_PDO;
+        $this->user_id = $param_user_id;
+        // $this->task = $param_task;
+        // $this->date = $param_date;
+    }
+
+    function insert($param_task,$param_date)
+
+    {
+        $this->task = $param_task;
+        $this->date = $param_date;
+       
+        //prepare insert statement
+        $sql = "INSERT INTO  list_table(list_item, due_date,user_id) VALUES (:list_item, :due_date, :user_id)"; 
+
+        if($stmt = $this->pdo->prepare($sql))
+        {
+
+        //bind parameters to the prepared statements
+        $stmt->bindParam(":list_item",$param_list_item,PDO::PARAM_STR);
+        $stmt->bindParam(":due_date",$param_due_date,PDO::PARAM_STR);
+        $stmt->bindParam(":user_id",$param_userID,PDO::PARAM_INT);
+
+        //set the parameters
+        $param_userID = $this->user_id;
+        $param_list_item = $this->task;
+        $param_due_date = $this->date;
+        
+
+        //execute the prepared statement
+        if($stmt->execute()){
+
+        }
+        else{
+            echo "didnt execute";
+        }
+        unset($stmt);
+        unset($pdo);
+        }
+        else{
+            echo  "Please press add task";
+        }
+    }
+
+    function display(){
+
+        include_once 'config/conn_class.php';
+
+        $sql = "SELECT * FROM list_table WHERE user_id=:user_id ORDER BY due_date ASC";
+
+        if($stmt = $pdo->prepare($sql)){
+            $stmt->bindParam(":user_id",$param_userID,PDO::PARAM_INT);
+
+            $param_userID = $this->user_id;
+            
+            if($stmt->execute()){
+                //fetch associative array
+            while($data = $stmt->fetch( PDO::FETCH_ASSOC )){
+
+                $task_id= $data["list_id"];
+                $task = $data['list_item'];
+                $date = $data['due_date'];
+                $status = $data["class"];
+
+                echo<<<END
+
+                <li id="listitem-$task_id" class="list-group-item d-flex justify-content-between align-items-center $status">
+               <span>$task</span>&nbsp;<span>$date</span></i><span><input type="submit" id="delete_button-$task_id" class="btn btn-dark fas delete" value="&#xf2ed" onclick="delete_row('$task_id')">  
+               <input type="submit" class="btn btn-dark fas check" value="&#xf00c" onclick="complete_task('$task_id')"></span>  </li>
+END;
+  
+               }
+            }
+            
+        }
+    }
+}
+?>
