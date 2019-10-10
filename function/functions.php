@@ -31,18 +31,4 @@ function validPassword($password,$confirm_password){
     }
 }
 
-;
-
-// if(!$validate_password){
-//     $password_err = "Choose a better password.";
-//     // echo "choose a better password". $sanpost_password;
-// }else{
-//     if($sanpost_password != $sanpost_confirm_pass){
-//         $confirm_password_err = "Passwords do not match.";
-//     } //Password matches the correct pattern and matches input in confirm password field
-//     else{
-//         $password = $sanpost_password;
-
-//     }
-// }
 ?>

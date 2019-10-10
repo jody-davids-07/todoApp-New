@@ -2,7 +2,7 @@
     background-image: url("https://d2oap2aqokhc4z.cloudfront.net/wp-content/uploads/20180104042702/Pastel-pink-sky-wave1-SFW2.jpg");
 }
 .login-body{
-    background:rgba(37, 55, 90, 0.61);
+    background-image: url("https://d2oap2aqokhc4z.cloudfront.net/wp-content/uploads/20180104042702/Pastel-pink-sky-wave1-SFW2.jpg");
 }
 .login-page-container{
     min-height: 100vh;
@@ -15,5 +15,5 @@
     width:500px;
     background-color: beige;
     border-radius: 5px;
-    padding: 2rem;
+    padding: 1rem;
 }
