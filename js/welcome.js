@@ -2,19 +2,6 @@ const addform = document.querySelector('.add');
 const list = document.querySelector('.todos');
 const search = document.querySelector('.search input')
 
-// const GENTEMPLATE = (todo,dates)=>{
-
-//     const html =    `
-//     <li class="list-group-item d-flex justify-content-between align-items-center">
-//     <span>${todo}</span>&nbsp<span>${dates}</span>
-//        <i class="fas fa-check"></i>
-//     <i class="far fa-trash-alt delete"></i>
-//     </li>`;
-
-//     list.innerHTML  += html;
-
-// };
-
 function GENTEMPLATE(todo,dates) {
     
     const html =    `
@@ -44,14 +31,6 @@ addform.addEventListener('submit', event =>{
 // delete todos
 //Add an event listener to todo list
 list.addEventListener('click',event=>{
-
-// if the what we click on (target) has the class Delete execute the code in the if statement block.
-//  if(event.target.classList.contains('delete')){
-//      event.target.parentElement.remove();
-//  }
-// });
-
-
 
 const filterTodos = (term) =>{
     //store the list items in to an array

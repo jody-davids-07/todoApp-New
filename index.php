@@ -29,7 +29,7 @@ $user_id = $_SESSION["id"];
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <script src="https://kit.fontawesome.com/0cd95c0d58.js" crossorigin="anonymous"></script>
     <!--Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="./css/stylewelcome.css">
+    <link rel="stylesheet" type="text/css" href="./css/welcomestyle.css">
 
     <title>Welcome <?php echo $username;?></title>
 </head>
@@ -62,7 +62,7 @@ $user_id = $_SESSION["id"];
 
 
     <div class="text-center text-light my-4">
-        <h1 class="mb-4">Welcome <?php echo $username;?>, here is your to do list...</h1>
+        <h1 id="welcome" class="mb-4">Welcome <?php echo $username;?>, here is your to do list...</h1>
     </div>
 
     <div class="container">

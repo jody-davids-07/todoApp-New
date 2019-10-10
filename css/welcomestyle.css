@@ -1,5 +1,6 @@
 body{
     background-image: url("https://live.staticflickr.com/3010/2584073277_31d6ec0e13_b.jpg");
+    background-size: cover;
 }
 .container{
     max-width:700px;
@@ -7,6 +8,10 @@ body{
 
 .form-header{
     color:#fff;
+}
+
+#welcome{
+    color: black;
 }
 input[type=text],
 input[type=text]:focus{

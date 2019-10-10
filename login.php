@@ -85,7 +85,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         $_SESSION["id"] = $user_id;
                           $_SESSION["username"] =$username;
                           //redirect user to welcome page
-                          header("location: welcome.php");
+                          header("location: index.php");
                         } else{
                            //display an error message if username doesnt exist
                            $password_err="The password enetered was not valid." ;
