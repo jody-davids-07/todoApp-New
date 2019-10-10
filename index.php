@@ -90,7 +90,7 @@ $user_id = $_SESSION["id"];
             $user->display();
             ?>
         <!--PHP CLASSS END-->
-        
+
         </ul>
 
         <div class="text-center mt-5">
@@ -120,3 +120,14 @@ $user_id = $_SESSION["id"];
    <!-- //<script src="./js/welcome.js"></script> -->
 </body>
 </html>
+
+<?php
+if(isset($_POST["addTask"])){
+    $user_id;
+    $task = $_POST['add'];
+    $date = $_POST['date'];
+    $user->insert($task,$date);
+    
+
+}
+?>
